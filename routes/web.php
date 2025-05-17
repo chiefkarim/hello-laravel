@@ -8,11 +8,13 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function () {
-    return view('jobs', ['jobs' => Job::all()]);
+    $jobs = Job::all();
+
+    return view('jobs', ['jobs' => $jobs]);
 });
 
 Route::get('/jobs/{id}', function ($id) {
-    $job = Job::findById($id);
+    $job = Job::find($id);
 
     return view('job', ['job' => $job]);
 });
