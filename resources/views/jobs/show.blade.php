@@ -9,7 +9,7 @@
     <p>This job Pays {{ $job->salary }} per year.</p>
     <div class="flex gap-2 mt-6">
         <p>
-            <x-button href="/jobs/{{ $job->id }}">Edit</x-button>
+            <x-button href="/jobs/{{ $job->id }}/edit">Edit</x-button>
         </p>
         <form method="POST" action="/jobs/{{ $job->id }}">
             @csrf
