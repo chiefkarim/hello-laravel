@@ -10,14 +10,14 @@
   <body class="h-full">
       <div class="min-h-full">
           <nav class="bg-gray-800">
-              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                  <div class="flex h-16 items-center justify-between">
+              <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                  <div class="flex justify-between items-center h-16">
                       <div class="flex items-center">
                           <div class="shrink-0">
                               <img class="size-8" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
                           </div>
                           <div class="hidden md:block">
-                              <div class="ml-10 flex items-baseline space-x-4">
+                              <div class="flex items-baseline ml-10 space-x-4">
                                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                   <x-nav-link href="/" :active="request()->is('/')">
                                       Home
@@ -32,8 +32,8 @@
                           </div>
                       </div>
                       <div class="hidden md:block">
-                          <div class="ml-4 flex items-center md:ml-6">
-                              <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
+                          <div class="flex items-center ml-4 md:ml-6">
+                              <button type="button" class="relative p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
                                   <span class="absolute -inset-1.5"></span>
                                   <span class="sr-only">View notifications</span>
                                   <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -44,18 +44,18 @@
                               <!-- Profile dropdown -->
                               <div class="relative ml-3">
                                   <div>
-                                      <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                      <button type="button" class="flex relative items-center max-w-xs text-sm bg-gray-800 rounded-full focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                           <span class="absolute -inset-1.5"></span>
                                           <span class="sr-only">Open user menu</span>
-                                          <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                          <img class="rounded-full size-8" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                                       </button>
                                   </div>
                               </div>
                           </div>
                       </div>
-                      <div class="-mr-2 flex md:hidden">
+                      <div class="flex -mr-2 md:hidden">
                           <!-- Mobile menu button -->
-                          <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" aria-controls="mobile-menu" aria-expanded="false">
+                          <button type="button" class="inline-flex relative justify-center items-center p-2 text-gray-400 bg-gray-800 rounded-md hover:text-white hover:bg-gray-700 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" aria-controls="mobile-menu" aria-expanded="false">
                               <span class="absolute -inset-0.5"></span>
                               <span class="sr-only">Open main menu</span>
                               <!-- Menu open: "hidden", Menu closed: "block" -->
@@ -73,29 +73,29 @@
 
               <!-- Mobile menu, show/hide based on menu state. -->
               <div class="md:hidden" id="mobile-menu">
-                  <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+                  <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
-                      <x-nav-link href="/" :active="request()->is('/')" class="block px-3 py-2 text-base">
+                      <x-nav-link href="/" :active="request()->is('/')" class="block py-2 px-3 text-base">
                           Home
                       </x-nav-link>
-                      <x-nav-link href="/jobs" :active="request()->is('jobs')" class="block px-3 py-2 text-base">
+                      <x-nav-link href="/jobs" :active="request()->is('jobs')" class="block py-2 px-3 text-base">
                           Jobs
                       </x-nav-link>
-                      <x-nav-link href="/contact" :active="request()->is('contact')" class="block px-3 py-2 text-base">
+                      <x-nav-link href="/contact" :active="request()->is('contact')" class="block py-2 px-3 text-base">
                           Contact
                       </x-nav-link>
                   </div>
-                  <div class="border-t border-gray-700 pt-4 pb-3">
+                  <div class="pt-4 pb-3 border-t border-gray-700">
                       <div class="flex items-center px-5">
                           <div class="shrink-0">
-                              <img class="size-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                              <img class="rounded-full size-10" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                           </div>
                           <div class="ml-3">
-                              <div class="text-base/5 font-medium text-white">Tom Cook</div>
+                              <div class="font-medium text-white text-base/5">Tom Cook</div>
                               <div class="text-sm font-medium text-gray-400">tom@example.com</div>
                           </div>
-                          <button type="button" class="relative ml-auto shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
+                          <button type="button" class="relative p-1 ml-auto text-gray-400 bg-gray-800 rounded-full hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 shrink-0 focus:outline-hidden">
                               <span class="absolute -inset-1.5"></span>
                               <span class="sr-only">View notifications</span>
                               <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -109,12 +109,14 @@
           </nav>
 
           <header class="bg-white shadow-sm">
-              <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+              <div class="py-6 px-4 mx-auto max-w-7xl sm:flex sm:justify-between sm:px-6 lg:px-8">
                   <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
+
+                  <x-button href="/jobs/create">Create Job</x-button>
               </div>
           </header>
           <main>
-              <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+              <div class="py-6 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                   {{ $slot }}
               </div>
           </main>
